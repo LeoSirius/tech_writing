@@ -9,7 +9,7 @@
 
 ## Database Backend
 
-django.db.backends.base - 连接具体数据数的基类，形如BaseXXXX
+django.db.backends.base - 连接具体数据库的基类，形如BaseXXXX
 
 django原生支持四种数据库的链接：（如果要使用其他数据库，需要使用第三方数据库驱动）
 这四种数据库继承base中的基类
