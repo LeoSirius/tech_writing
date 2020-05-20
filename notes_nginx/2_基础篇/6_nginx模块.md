@@ -12,7 +12,7 @@
 
 ```
 location /mystatus {
-    stub_status
+    stub_status;
 }
 ```
 
