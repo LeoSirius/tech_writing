@@ -38,7 +38,7 @@ server {
     }
 ```
 
-## 代理IP绕过的问题
+## 代理IP绕过访问控制的问题
 
 - remote_addr：直接和server建立连接的IP addr
 - x_forwarded_for：会记录下整个过程。
