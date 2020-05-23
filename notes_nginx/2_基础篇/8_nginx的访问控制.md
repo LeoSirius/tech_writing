@@ -54,3 +54,15 @@ IP1  ->  IP2                  ->        Nginx
          x_forwarded_for = IP1          x_forwarded_for = IP1, IP2
 IP1  ->  IP2                  ->        Nginx
 ```
+
+## http_auth_basic_module
+
+类似access，在admin页面加入认证，/etc/nginx/auth_conf是用htpassd生成的文件
+
+```
+    location ~ ^/admin.html {
+        auth_basic "Auth access test";
+        auth_basic_user_file /etc/nginx/auth_conf;
+        root /opt/app/code;
+    }
+```
