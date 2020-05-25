@@ -70,9 +70,9 @@ Variable: abcdef123456
 
 重定向的三种形式，都是把stdout和stderr重定向到word
 
-- &>word
-- >&word
-- >word 2>&1
+- `&>word`
+- `>&word`
+- `>word 2>&1`
 
 `some_command && a || b`表示如果some_command正确执行，则执行a，否则执行b
 
