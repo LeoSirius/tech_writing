@@ -25,12 +25,6 @@ http {
         limit_req zone=req_zone burst=3 nodely;     # 请求速率达到上限后，可以看到最终的成功请求的4个。其中3个delay了一秒。客户端这边可以明显的感觉到
 
         limit_conn conn_zone 1;   # 限制一个ip只能有一个连接
-
-
-        
     }
-
-
 }
-
-
+```
