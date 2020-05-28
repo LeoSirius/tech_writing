@@ -1,3 +1,4 @@
+```py
 import socket
 
 HOST, PORT = '', 8888
@@ -19,3 +20,4 @@ Hello, World!
 """
     client_connection.sendall(http_response)
     client_connection.close()
+```

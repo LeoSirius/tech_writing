@@ -1,3 +1,4 @@
+```py
 # Tested with Python 3.7+ (Mac OS X)
 import io
 import socket
@@ -141,3 +142,4 @@ if __name__ == '__main__':
     httpd = make_server(SERVER_ADDRESS, application)
     print(f'WSGIServer: Serving HTTP on port {PORT} ...\n')
     httpd.serve_forever()
+```
