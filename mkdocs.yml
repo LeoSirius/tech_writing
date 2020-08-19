@@ -1,0 +1,44 @@
+# Project information
+site_name: Leo Sirius 的 blog site
+site_author: Leo Sirius
+docs_dir: /opt/blog
+site_url: https://leosirius.fun/
+
+repo_name: LeoSirius/blog
+repo_url: https://github.com/LeoSirius/blog
+
+
+copyright: Copyright &copy; 2020 Leo Sirius
+
+theme:
+  name: material
+  # icon:
+  logo: assets/favicon.jpeg
+  favicon: assets/favicon.jpeg
+  features:
+    - tabs
+  palette:
+    primary: light-green
+    accent:
+
+plugins:
+  - search # necessary for search to work
+  - awesome-pages
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/LeoSirius
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: true
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
