@@ -20,7 +20,7 @@
 <body>
 <div id=”board” 
     <script>alert(“hey!you are attacked”)</script>
-</div>     
+</div>
     </body>
 </html>
 ```
