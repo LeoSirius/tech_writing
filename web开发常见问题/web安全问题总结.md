@@ -32,7 +32,7 @@
 
 > 除了script标签外，img标签和可能被插入来进行xss攻击
 
-### 解决方法
+### 防御方法
 
 #### 1.对要展示的文本进行转义
 
@@ -69,3 +69,26 @@
 
 - 1.登录受信任网站A，并在本地生成Cookie。
 - 2.在不登出A的情况下，访问危险网站B。
+
+### 示例
+
+银行网站A，它以GET请求来完成银行转账的操作，如：`http://www.mybank.com/Transfer.php?toBankId=11&money=1000`
+
+危险网站B，它里面有一段HTML的代码如下
+
+```html
+<img src=http://www.mybank.com/Transfer.php?toBankId=11&money=1000>
+```
+
+先登录银行网站A，然后访问网站B，这时转账操作就会执行。
+
+> 如果银行网站A用POST方法来转账，还是有被攻击的风险，只要B网站中的代码复杂一点，也可以发起POST请求
+
+### 防御方法
+
+#### 服务端防御
+
+> 总体思想：在客户端页面上加伪随机数
+
+比如django的csrf token。在`django.middleware.csrf.CsrfViewMiddleware`这个中间层来完成验证
+
