@@ -1,7 +1,7 @@
 # Project information
 site_name: Leo Sirius 的 blog site
 site_author: Leo Sirius
-docs_dir: /docs
+docs_dir: ./docs
 site_url: https://leosirius.github.io/blog/
 
 repo_name: LeoSirius/blog
