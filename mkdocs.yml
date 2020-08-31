@@ -22,7 +22,7 @@ theme:
     accent:
 
 plugins:
-  - search # necessary for search to work
+  - search
   - awesome-pages
 
 # Customization
