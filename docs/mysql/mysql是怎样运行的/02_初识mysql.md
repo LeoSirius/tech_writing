@@ -73,6 +73,6 @@ mysql -hlocalhost -uroot --socket=/tmp/a.txt -p
 
 查看当前服务器程序支持的存储引擎
 
-```bash
+```sql
 SHOW ENGINES;
 ```
