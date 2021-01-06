@@ -38,7 +38,7 @@ mysql -hlocalhost -uroot --socket=/tmp/a.txt -p
 
 不管采用哪种通信方式，最后实现的功能都是：`客户端进程向服务器进程发送一段文本（MySQL语句），服务器进程处理后再向客户端进程发送一段文本（处理结果）`
 
-![服务器处理请求3步](https://s3.ax1x.com/2020/12/03/DTx5Yn.png)
+![01_mysql架构](https://raw.githubusercontent.com/LeoSirius/tc/master/tech_writting/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84%EF%BC%88%E6%8E%98%E9%87%91%E7%AC%94%E8%AE%B0%EF%BC%89/02_%E5%88%9D%E8%AF%86mysql.md/01_mysql%E6%9E%B6%E6%9E%84.png)
 
 服务器处理请求大致分成三步：
 
