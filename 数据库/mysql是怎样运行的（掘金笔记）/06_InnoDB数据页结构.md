@@ -23,3 +23,7 @@
 如果一个页中的User Records用光了Free Space，则会去创建一个新的页。
 
 ![02_用光free_space](https://raw.githubusercontent.com/LeoSirius/tc/master/tech_writting/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84%EF%BC%88%E6%8E%98%E9%87%91%E7%AC%94%E8%AE%B0%EF%BC%89/06_InnoDB%E6%95%B0%E6%8D%AE%E9%A1%B5%E7%BB%93%E6%9E%84/02_%E7%94%A8%E5%85%89free_space.png)
+
+### 
+
+记录在页中按照主键值有小到大串成一个单链表
