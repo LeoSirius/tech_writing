@@ -117,3 +117,5 @@ TLS（Transport Layer Security，传输层安全）：其前身是 SSL。SSL3.0�
 8. 客户端解密信息
   客户端用之前生成的client key解密服务段传过来的信息，于是获取了解密后的内容
 
+![03_https流程2](https://raw.githubusercontent.com/LeoSirius/tc/master/tech_writting/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/http%E5%8D%8F%E8%AE%AE%E6%80%BB%E7%BB%93/03_https%E6%B5%81%E7%A8%8B2.jpg)
+
