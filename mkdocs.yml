@@ -10,8 +10,8 @@ repo_url: https://github.com/LeoSirius/tech_writing/
 
 theme:
   name: material
-  favicon: ./logo.png
-  logo: ./logo.png
+  favicon: assets/logo.png
+  logo: assets/logo.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky
