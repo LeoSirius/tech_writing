@@ -1,10 +1,12 @@
 site_name: leo的技术写作
 site_author: leo
+site_url: https://leosirius.github.io/tech_writing/
 docs_dir: ./docs
 
 
-repo_name: seatable/seatable-admin-docs
-repo_url: https://github.com/seatable/seatable-admin-docs/
+
+repo_name: tech_writing
+repo_url: https://github.com/LeoSirius/tech_writing/
 
 theme:
   name: material
