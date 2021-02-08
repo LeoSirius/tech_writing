@@ -8,8 +8,8 @@ repo_url: https://github.com/seatable/seatable-admin-docs/
 
 theme:
   name: material
-  features:
-    - navigation.tabs
+#   features:
+#     - navigation.tabs
 
-plugins:
-  - search
+# plugins:
+#   - search
