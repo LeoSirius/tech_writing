@@ -1,6 +1,6 @@
 site_name: leo的技术写作
 site_author: leo
-docs_dir: ./
+docs_dir: ./docs
 
 
 repo_name: seatable/seatable-admin-docs
@@ -8,6 +8,8 @@ repo_url: https://github.com/seatable/seatable-admin-docs/
 
 theme:
   name: material
+  features:
+    - navigation.tabs
 
 plugins:
   - search
