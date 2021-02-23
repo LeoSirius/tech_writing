@@ -28,7 +28,7 @@ linux中没有专门查看局部变量的命令。`set`命令会列出所有变�
 - `export variable_name`后，变量便成为了全局变量
 - 修改子进程中的全局变量不会影响父进程中的那个变量
 
-```bash
+```sh
 $ name='Leo'
 $ export name
 $ echo $name
