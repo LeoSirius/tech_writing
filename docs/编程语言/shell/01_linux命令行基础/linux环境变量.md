@@ -57,6 +57,6 @@ Leo
 $ PATH=$PATH:/root/new_folder/new_bin
 ```
 
-## 数组环境变量
+## 数组变量
 
 
