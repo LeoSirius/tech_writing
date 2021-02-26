@@ -59,4 +59,15 @@ $ PATH=$PATH:/root/new_folder/new_bin
 
 ## 数组变量
 
+```bash
+(base) root test # echo $mytest
+one
+(base) root test # echo ${mytest}
+one
+(base) root test # echo ${mytest[*]}       # 取所有值的正确方法
+one two three four five
+(base) root test # unset mytest            # unset 整个数组变量
+(base) root test # echo ${mytest[*]}
+                                           # unset 之后，输出空的
+```
 
