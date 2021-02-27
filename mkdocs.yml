@@ -19,10 +19,7 @@ theme:
 
 
 markdown_extensions:
-  - pymdownx.inlinehilite
   - pymdownx.highlight:
-      linenums: true
-
-markdown_extensions:
-  - pymdownx.highlight
+    linenums: true
   - pymdownx.superfences
+  - pymdownx.inlinehilite
