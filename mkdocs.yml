@@ -17,3 +17,8 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
 
+
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      linenums: true
