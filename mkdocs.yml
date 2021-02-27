@@ -7,7 +7,9 @@ repo_name: tech_writing
 repo_url: https://github.com/LeoSirius/tech_writing/
 
 theme:
-  name: material
+  palette:
+    primary: light green
+    accent: light green
   favicon: logo.png
   logo: logo.png
   features:
