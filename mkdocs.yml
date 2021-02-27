@@ -22,3 +22,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.highlight:
       linenums: true
+
+markdown_extensions:
+  - codehilite
+  - pymdownx.highlight:
+      use_pygments: true
