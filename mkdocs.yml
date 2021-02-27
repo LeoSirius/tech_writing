@@ -24,6 +24,5 @@ markdown_extensions:
       linenums: true
 
 markdown_extensions:
-  - codehilite
-  - pymdownx.highlight:
-      use_pygments: true
+  - pymdownx.highlight
+  - pymdownx.superfences
