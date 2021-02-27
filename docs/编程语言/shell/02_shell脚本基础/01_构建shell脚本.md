@@ -53,23 +53,23 @@ date
 变量在用`$`在字符串中可以直接使用
 
 ```bash
-(base) root test # echo "home: $HOME"
+$ echo "home: $HOME"
 home: /root
 ```
 
 用花括号可以更好的隔开变量与字符串其他内容
 
 ```bash
-(base) root test # echo "home: ${HOME}"
+$ echo "home: ${HOME}"
 home: /root
 ```
 
 想输出`$`符可以用转移符号
 
 ```bash
-(base) root test # echo "money: $15"
+$ echo "money: $15"
 money: 5
-(base) root test # echo "money: \$15"
+$ echo "money: \$15"
 money: $15
 ```
 
@@ -86,7 +86,7 @@ money: $15
 内联输入重定向
 
 ```bash
-(base) root test # wc << EOF
+$ wc << EOF
 > string 1
 > string 2
 > string 3
@@ -99,10 +99,10 @@ money: $15
 `Bourne shell`最初提供了`expr`命令来处理数学运算，但这个命令比较拉跨。bash中提供了方括号来进行数学运算
 
 ```bash
-(base) root test # echo $var1
+$ echo $var1
 6
-(base) root test # var2=$[$var1*10]
-(base) root test # echo $var2
+$ var2=$[$var1*10]
+$ echo $var2
 60
 ```
 
