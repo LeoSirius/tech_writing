@@ -18,6 +18,10 @@ theme:
     - navigation.tabs.sticky
 
 
+markdown_extensions:
+  - toc:
+      toc_depth: 3
+
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
   - javascripts/config.js
