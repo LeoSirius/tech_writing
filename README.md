@@ -4,6 +4,7 @@ content tree
 
 - 操作系统
     - [ ] unix 环境高级编程（md + goodnotes）
+- 数据库
     - [ ] mysql 是怎样运行的
     - [ ] redis 深度历险记
 - 编程语言
