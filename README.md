@@ -3,7 +3,7 @@
 content tree
 
 - 操作系统
-    - [ ] unix 环境高级编程（md + goodnotes）
+    - [ ] unix 环境高级编程（md）
 - 数据库
     - [ ] sql 入門 （mysql必知必會）
     - [ ] mysql 是怎样运行的
