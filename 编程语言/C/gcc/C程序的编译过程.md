@@ -60,7 +60,7 @@ gcc -c 生成目标文件
 gcc -c test.c
 ```
 
-是用 hexdump 或 od 可以查看
+是用 hexdump 或 od 可以查看其内容
 
 ## Linking
 
