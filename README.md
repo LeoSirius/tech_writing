@@ -26,6 +26,6 @@ todo
     - 掘金 TCP
     - 掘金 MySQL
 
-- home
+- h
     - Unix 环境高级编程
     - Unix 网络编程
