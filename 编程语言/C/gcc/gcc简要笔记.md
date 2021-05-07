@@ -9,6 +9,13 @@
 
 > gcc -Idir dir 是头文件所在路径，gcc -Ldir dir 是库文件所在路径
 
+I 和 L 是指定 dir，而 llibrary 则是指定库
+
+-l 和 -L
+
+- -l: -larchive Add archive file archive to the list of files to link. ld will search its path-list for occurrences of libarchive.a for every archive specified.
+- -L: -Lsearchdir Add path searchdir to the list of paths that ld will search for archive libraries and ld control scripts.
+
 ## 常用选项解释
 
 ## 静态库和动态库
