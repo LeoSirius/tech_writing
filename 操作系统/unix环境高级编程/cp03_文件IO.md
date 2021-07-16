@@ -176,9 +176,9 @@ i-node 中包含文件所有者、文件长度、物理磁盘地址等信息。
 
 - 打开文件描述符表：每个进程自个有一个（即有两个）
 - 文件表项：每个进程相应的 fd 各指向一个（即有两个）
-- v-note：两个文件表项的指针都指向同一个 v-node（即只有一个）
+- v-node：两个文件表项的指针都指向同一个 v-node（即只有一个）
 
-但是当在 fork 或其他一些情况时（如 dup），父子进程的 fd 会指向同一个「文件表项」
+但是当在 fork 或其他一些情况时（如 dup），父子进程的 fd 会指向同一个「文件表项」。因为「文件表项」不在进程空间中
 
 ## 3.11 原子操作
 
@@ -245,5 +245,92 @@ fcntl(fd, F_DUPFD, fd2)
 ## 3.14 fcntl 函数
 
 fcntl 用来改变已打开的文件的属性
+
+```c
+int fcntl(int fd, int cmd, .../* int arg */);
+```
+
+根据 cmd 的不同，其有 5 种功能
+
+- 复制一个已有的文件描述符 cmd = F_DUPFD or F_DUPFD_CLOEXEC
+- 获取/设置文件描述符标志 cmd = F_GETFD or F_SETFD
+- 获取/设置文件状态标志 cmd = F_GETFL or F_SETFL （即是在 open 时传的文件状态标志）
+- 获取/设置异步IO所有权 cmd = F_GETOWN or F_SET_OWN
+- 获取/设置记录锁 cmd = F_GETLK or F_SETLK or F_SETLKW
+
+fcntl 的返回值和 cmd 有关。如果出错都返回 -1。
+
+- cmd = F_DUPFD 返回新的文件描述符
+- cmd = F_GETFD or F_GETFL 返回相应的标志
+- cmd = F_GETOWN 返回正的进程 ID 或负的进程组 ID
+
+下面的程序打印指定文件描述符的一些标志
+
+```c
+#include "apue.h"
+#include <fcntl.h>
+
+
+int main(int argc, char *argv[])
+{
+    int val;
+
+    if (argc != 2)
+        err_quit("usage: a.out <descriptor#>");
+
+    if ((val = fcntl(atoi(argv[1]), F_GETFL, 0)) < 0)
+        err_sys("fcntl error for fd %d", atoi(argv[1]));
+
+    switch (val & O_ACCMODE) {
+        case O_RDONLY:
+            printf("read only");
+            break;
+        case O_WRONLY:
+            printf("write only");
+            break;
+        case O_RDWR:
+            printf("read write");
+            break;
+        default:
+            err_dump("unknown access mode");
+    }
+
+    if (val & O_APPEND)
+        printf(", apppend");
+    if (val & O_NONBLOCK)
+        printf(", nonblocking");
+    if (val & O_SYNC)
+        printf(", synchronous writes");
+
+#if !defined(_POSIX_C_SOURCE) && defined(O_FSYNC) && (O_FSYNC != O_SYNC)
+    if (val & O_FSYNC)
+        printf(", synchronous writes");
+#endif
+    putchar('\n');
+    exit(0);
+}
+```
+
+`5<>tmp.foo` 表示在描述符 5 上打开文件 tmp.foo 以供读写
+
+```
+(base) root test # ./a.out 0 < /dev/tty
+read only
+(base) root test # ./a.out 1 > tmp.foo
+(base) root test # cat tmp.foo
+write only
+(base) root test # ./a.out 2 2>>tmp.foo
+write only, apppend
+(base) root test # ./a.out 5 5<>tmp.foo
+read write
+```
+
+## 3.15 ioctl
+
+这个函数用来进行一些 IO 操作。终端是使用这个函数最多的地方
+
+## 3.16 /dev/fd
+
+打开文件 `/dev/fd/n` 等效于复制文件描述符 n
 
 

@@ -10,7 +10,7 @@ void mySwap(T &a, T &b) {
 
 int main() {
     // 使用模板的两种方法
-    // 1. 自动类型推到
+    // 1. 自动类型推导
     int a = 10;
     int b = 20;
     mySwap(a, b);
